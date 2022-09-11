@@ -8,4 +8,9 @@ module.exports = function renderAssets() {
     const destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
     
     sh.cp('-R', sourcePath, destPath)
+
+    const sourcePath2 = upath.resolve(upath.dirname(__filename), '../node_modules/jquery.json-viewer/json-viewer');
+    const destPath2 = upath.resolve(upath.dirname(__filename), '../dist/.');
+    
+    sh.cp('-R', sourcePath2, destPath2)
 };
