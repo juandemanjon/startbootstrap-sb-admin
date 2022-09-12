@@ -54,11 +54,10 @@ block content
         //-                 .small.text-white
         //-                     i.fas.fa-angle-right
         .row
-
             .col-xl-6
                 .card.mb-4
                     .card-header
-                        i.fas.fa-chart-area.me-1
+                        i.fas.fa-satellite-dish.me-1
                         | System Info
                     .card-body
                         pre#formSystemInfo(width='100%', height='40')
@@ -66,17 +65,27 @@ block content
             .col-xl-6
                 .card.mb-4
                     .card-header
-                        i.fas.fa-chart-bar.me-1
+                        i.fas.fa-satellite-dish.me-1
                         | Software Info
                     .card-body
                         pre#formSoftwareInfo(width='100%', height='40')
+        .row
+            .col-xl-4
+                .card.mb-4
+                    .card-header
+                        i.fas.fa-table.me-1
+                        | Present Nodes
+                    .card-body
+                        include includes/datatable.pug
+                    
+            .col-xl-8
+                .card.mb-4
+                    .card-header
+                        i.fas.fa-file-text.me-1
+                        | Config Report
+                    .card-body
+                        pre#formConfigReport(width='100%', height='40')
         
-        .card.mb-4
-            .card-header
-                i.fas.fa-table.me-1
-                | DataTable Example
-            .card-body
-                include includes/datatable.pug
 
 
 append scripts
